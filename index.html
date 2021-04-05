@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+      </head>
+
+<body>
+
+<div class="image">
+  <img id="image"/>
+      <button id="button" onclick="get_random_dog_image()"> Random </button>
+
+
+
+
+</div>
+<!--Description-->
+<div class="Description" id="dess">
+    <p style="  font-size: 40px;
+    ">Name-SohumKalia</p></p>
+     <p style="  font-size: 40px; color: blue;
+     ">Grade-A+</p></p>
+      <p style="  font-size: 40px;
+      ">Marks-100%</p></p>
+    </div>
+    <script>
+      function get_random_dog_image(){
+
+url = "https://dog.ceo/api/breeds/image/random";
+
+fetch(url)
+.then(function(response){
+  return response.json();
+})
+.then(function(data){
+  display_image(data.message);
+})
+.catch(function(error){
+  console.log("Error: " + error);
+});
+
+
+}
+
+function display_image(image_url){
+document.getElementById("image").src = image_url;
+}
+
+
+</script>
+</body>
+</html>
