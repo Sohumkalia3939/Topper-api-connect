@@ -8,7 +8,6 @@
 
 <div class="image">
   <img id="image"/>
-      <button id="button" onclick="get_random_dog_image()"> Random </button>
 
 
 
@@ -24,8 +23,6 @@
       ">Marks-100%</p></p>
     </div>
     <script>
-      function get_random_dog_image(){
-
 url = "https://dog.ceo/api/breeds/image/random";
 
 fetch(url)
@@ -40,7 +37,7 @@ fetch(url)
 });
 
 
-}
+
 
 function display_image(image_url){
 document.getElementById("image").src = image_url;
